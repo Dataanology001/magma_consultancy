@@ -39,29 +39,35 @@
         time: 2000
     });
 
-
-    // Courses carousel
-    $(".courses-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        loop: true,
-        dots: false,
-        nav : false,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            992:{
-                items:4
-            }
+// Courses carousel
+$(".courses-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 4000,   // 4 seconds per slide
+    autoplayHoverPause: true, // pause when mouse over
+    smartSpeed: 1000,        // smoother slide transition
+    margin: 20,              // space between items
+    loop: true,
+    dots: false,
+    nav: true,               // add navigation arrows
+    navText: [
+        '<i class="fa fa-chevron-left"></i>',
+        '<i class="fa fa-chevron-right"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 2
+        },
+        768: {
+            items: 3
+        },
+        992: {
+            items: 4
         }
-    });
+    }
+});
 
 
     // Team carousel
